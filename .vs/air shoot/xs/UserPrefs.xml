@@ -3,7 +3,7 @@
     <Files>
       <File FileName="Assets/Scripts/SuperEnemy.cs" Line="11" Column="71" />
       <File FileName="Assets/Scripts/Enemy.cs" />
-      <File FileName="Assets/Scripts/Player.cs" Line="67" Column="24" />
+      <File FileName="Assets/Scripts/Player.cs" Line="48" Column="30" />
       <File FileName="Assets/Scripts/TitleScene.cs" />
     </Files>
   </MonoDevelop.Ide.Workbench>

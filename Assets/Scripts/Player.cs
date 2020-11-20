@@ -28,6 +28,26 @@ public class Player : MonoBehaviour
         m_targetPos = this.m_transform.position;// 添加代碼 初始化目標點位置
     }
 
+    void MoveTo()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            Vector3 ms = Input.mousePosition;  //獲取鼠標的屏幕位置
+            Ray ray = Camera.main.ScreenPointToRay(ms);//將屏幕位置轉化為射線
+            RaycastHit hitinfo; // 用來紀錄射線的碰撞信息
+            bool iscast = Physics.Raycast(ray, out hitinfo, 1000, m_inputMask);
+            if (iscast)
+            {
+                //如果射中目標 紀錄射線的碰撞點
+                m_targetPos = hitinfo.point;
+            }
+        }
+
+
+        // 使用 Vector3 提供的MoveTowards函數 獲得朝目標移動的位置
+        Vector3 pos=Vector3()
+    }
+
     // Update is called once per frame
     void Update()
     {
