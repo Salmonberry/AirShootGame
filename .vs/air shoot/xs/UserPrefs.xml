@@ -1,26 +1,15 @@
 ﻿<Properties StartupConfiguration="{02D35A78-09C9-2E2F-571F-B314B319EB05}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Rocket.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player.cs" Line="34" Column="43" />
-      <File FileName="Assets/Scripts/Rocket.cs" Line="21" Column="28" />
+      <File FileName="Assets/Scripts/SuperEnemy.cs" Line="11" Column="71" />
+      <File FileName="Assets/Scripts/Enemy.cs" />
+      <File FileName="Assets/Scripts/Player.cs" Line="67" Column="24" />
+      <File FileName="Assets/Scripts/TitleScene.cs" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="air shoot" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True">
-                <Node name="Rocket.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="aefe0ee1-0267-447d-805b-73a922171626" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9e7ae696-1f3f-4bf8-b7f4-cdad38d6dd39" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

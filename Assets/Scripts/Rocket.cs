@@ -20,4 +20,17 @@ public class Rocket : MonoBehaviour
     {
         Debug.Log("我是子彈君");
     }
+
+    private void Update()
+    {
+        //向前（Z方向）移动
+        transform.Translate(new Vector3(0, 0, m_speed * Time.deltaTime));
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag != "Enemy")
+            return;
+        Destroy(this.gameObject);
+    }
 }

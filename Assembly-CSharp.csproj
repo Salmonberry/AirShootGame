@@ -63,8 +63,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AutoDestory.cs" />
+    <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Rocket.cs" />
+    <Compile Include="Assets\Scripts\SpwanEnemy.cs" />
+    <Compile Include="Assets\Scripts\SuperEnemy.cs" />
+    <Compile Include="Assets\Scripts\TitleScene.cs" />
     <Reference Include="UnityEngine">
       <HintPath>/Volumes/Data/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

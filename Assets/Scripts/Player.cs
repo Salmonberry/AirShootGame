@@ -6,13 +6,26 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float m_speed = 1;
+    public float m_life = 3;
+    public Transform m_rocket;
     private Transform m_transform;
+    private AudioSource _audioSource;
+    public AudioClip _audioClip;
+    public Transform _explsion;
+    protected Vector3 m_targetPos; // 目標位置
+    public LayerMask m_inputMask;  // 鼠標射線碰撞層
+    //發射速度
+    public float m_rocketTimer = 0;
 
 
     // Start is called before the first frame update
     void Start()
     {
         m_transform = this.transform;
+
+        _audioSource = this.GetComponent<AudioSource>();
+
+        m_targetPos = this.m_transform.position;// 添加代碼 初始化目標點位置
     }
 
     // Update is called once per frame
@@ -20,9 +33,11 @@ public class Player : MonoBehaviour
     {
         //縱向移動距離
         float movev = 0;
-        //水平移動距離
 
+        //水平移動距離
         float moveh = 0;
+
+      
 
         //按上鍵Z方向遞增
         if (Input.GetKey(KeyCode.UpArrow))
@@ -50,5 +65,47 @@ public class Player : MonoBehaviour
 
         //移動
         m_transform.Translate(new Vector3(moveh, 0, movev));
+
+
+
+        //按空格鍵或鼠標左鍵發射子彈
+        m_rocketTimer -= Time.deltaTime;
+        if (m_rocketTimer <= 0)
+        {
+            m_rocketTimer = 0.1f;
+
+            if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
+            {
+                Instantiate(m_rocket, m_transform.position, m_transform.rotation);
+
+                if (_audioSource.isPlaying)
+                {
+                    _audioSource.Stop();
+                }
+                _audioSource.PlayOneShot(_audioClip);
+            }
+        }
+
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag != "PlayerRocket")
+        {
+            m_life -= 1;    //  减少生命
+            GameManager.Instance.ChangeLife(m_life);
+
+            if (m_life <= 0) // 当生命为0时，
+            {
+                Destroy(this.gameObject); // 自我销毁
+                Instantiate(_explsion, this.transform.position, Quaternion.identity);
+
+            }
+        }
+    }
+
+
+
+
+
 }
