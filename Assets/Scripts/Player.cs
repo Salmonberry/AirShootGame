@@ -45,7 +45,10 @@ public class Player : MonoBehaviour
 
 
         // 使用 Vector3 提供的MoveTowards函數 獲得朝目標移動的位置
-        Vector3 pos=Vector3()
+        Vector3 pos = Vector3.MoveTowards(m_transform.position, m_targetPos, m_speed * Time.deltaTime);
+
+        //更新當前位置
+        this.m_transform.position = pos;
     }
 
     // Update is called once per frame
@@ -105,6 +108,8 @@ public class Player : MonoBehaviour
                 _audioSource.PlayOneShot(_audioClip);
             }
         }
+
+        MoveTo();
 
     }
 

@@ -3,13 +3,13 @@
     <Files>
       <File FileName="Assets/Scripts/SuperEnemy.cs" Line="11" Column="71" />
       <File FileName="Assets/Scripts/Enemy.cs" />
-      <File FileName="Assets/Scripts/Player.cs" Line="48" Column="30" />
+      <File FileName="Assets/Scripts/Player.cs" Line="14" Column="32" />
       <File FileName="Assets/Scripts/TitleScene.cs" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9e7ae696-1f3f-4bf8-b7f4-cdad38d6dd39" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9fb15f79-d580-4e46-85d4-c82304a443b9" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
